@@ -4,8 +4,8 @@ class weatherManager: ObservableObject {
 
 	private let weatherService: WeatherDataProtocol
 
-    	init() {
-        	self.weatherService = WeatherDataService()
+    	init(weatherService: WeatherDataProtocol) {
+        	self.weatherService = weatherService
     	}
 
     	func loadWeatherForecast(currentCity: String) {
