@@ -1,7 +1,8 @@
 import SwiftUI
 
 struct WeatherView: View {
-    @ObservedObject var viewModel = weatherManager()
+    let weatherAppService = WeatherDataService()
+    @ObservedObject var viewModel = weatherManager((weatherService: weatherAppService)
     @State var cityName: String = ""
 
     var body: some View {
